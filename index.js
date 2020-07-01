@@ -1,10 +1,12 @@
 const express = require('express')
 const request = require('request');
 const cheerio = require('cheerio');
-const bodyParser = require('body-parser')
+const cors = require('cors')
 const server = express()
 const port = process.env.PORT || 5555
 const url = 'http://gasprice.kapook.com/gasprice.php'
+
+server.use(cors())
 
 server.get('/', (req, res) => {
   res.send({
@@ -275,5 +277,4 @@ server.get('*', (req, res) => {
   )
 })
 
-server.use(bodyParser.json())
 server.listen(port, () => console.log('Server running at port %d.', port))
