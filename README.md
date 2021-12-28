@@ -1,13 +1,12 @@
-Thai Oil API
-=============
-API for checking latest Thai Oil prices
+# Thai Oil API
 
-Requirements
-------------
+API for checking latest Thai oil prices
+
+## Requirements
+
 - Node LTS
 
-Installation
-------------
+## Installation
 
 ```sh
 $ npm install
@@ -21,143 +20,138 @@ $ yarn
 $ yarn start
 ```
 
-API
----
+## API
+
 This API is based on HTTPS requests and JSON responses. `https://thai-oil-api.herokuapp.com/`
 
-### Get latest gold prices
+### Get latest oil prices
 
 ##### API request
+
 `GET /latest`
 
 ##### API response
+
 <details>
 <summary>JSON</summary>
 
 ```json
 {
-    "status": "success",
-    "response": {
-        "date": "29 ธันวาคม 2562",
-        "note": "Retail Prices in Bangkok & Vicinities Unit : Baht/Litre",
-        "price": {
-            "ptt": {
-                "gasoline_95": "33.66",
-                "gasohol_95": "26.25",
-                "gasohol_91": "25.98",
-                "gasohol_E20": "23.24",
-                "gasohol_E85": "19.89",
-                "diesel": "26.49",
-                "diesel_B10": "24.49",
-                "diesel_B20": "23.49",
-                "premium_diesel": "30.34"
-            },
-            "bcp": {
-                "gasoline_95": "",
-                "gasohol_95": "26.25",
-                "gasohol_91": "25.98",
-                "gasohol_E20": "23.24",
-                "gasohol_E85": "18.89",
-                "diesel": "26.49",
-                "diesel_B10": "24.49",
-                "diesel_B20": "23.49",
-                "premium_diesel": "30.36"
-            },
-            "shell": {
-                "gasoline_95": "",
-                "gasohol_95": "26.25",
-                "gasohol_91": "25.98",
-                "gasohol_E20": "23.24",
-                "gasohol_E85": "",
-                "diesel": "26.49",
-                "diesel_B10": "24.49",
-                "diesel_B20": "23.49",
-                "premium_diesel": "30.94",
-                "vpower_gasohol_95": "31.74"
-            },
-            "esso": {
-                "gasoline_95": "",
-                "gasohol_95": "26.25",
-                "gasohol_91": "25.98",
-                "gasohol_E20": "23.24",
-                "gasohol_E85": "",
-                "diesel": "26.49",
-                "diesel_B10": "24.49",
-                "diesel_B20": "23.49",
-                "premium_diesel": "30.94"
-            },
-            "caltex": {
-                "gasoline_95": "34.11",
-                "gasohol_95": "26.25",
-                "gasohol_91": "25.98",
-                "gasohol_E20": "23.24",
-                "gasohol_E85": "",
-                "diesel": "26.49",
-                "diesel_B10": "",
-                "diesel_B20": "23.49",
-                "premium_diesel": "30.74"
-            },
-            "irpc": {
-                "gasoline_95": "",
-                "gasohol_95": "26.25",
-                "gasohol_91": "25.98",
-                "gasohol_E20": "",
-                "gasohol_E85": "",
-                "diesel": "26.49",
-                "diesel_B10": "",
-                "diesel_B20": "",
-                "premium_diesel": ""
-            },
-            "pt": {
-                "gasoline_95": "34.16",
-                "gasohol_95": "26.25",
-                "gasohol_91": "25.98",
-                "gasohol_E20": "23.24",
-                "gasohol_E85": "",
-                "diesel": "26.49",
-                "diesel_B10": "",
-                "diesel_B20": "",
-                "premium_diesel": ""
-            },
-            "susco": {
-                "gasoline_95": "33.66",
-                "gasohol_95": "26.25",
-                "gasohol_91": "25.98",
-                "gasohol_E20": "23.24",
-                "gasohol_E85": "18.89",
-                "diesel": "26.49",
-                "diesel_B10": "24.49",
-                "diesel_B20": "23.49",
-                "premium_diesel": ""
-            },
-            "pure": {
-                "gasoline_95": "",
-                "gasohol_95": "30.30",
-                "gasohol_91": "30.03",
-                "gasohol_E20": "27.79",
-                "gasohol_E85": "21.79",
-                "diesel": "29.84",
-                "diesel_B10": "",
-                "diesel_B20": "",
-                "premium_diesel": ""
-            },
-            "susco_dealers": {
-                "gasoline_95": "33.66",
-                "gasohol_95": "26.25",
-                "gasohol_91": "25.98",
-                "gasohol_E20": "23.24",
-                "gasohol_E85": "",
-                "diesel": "26.49",
-                "diesel_B10": "24.49",
-                "diesel_B20": "23.49",
-                "premium_diesel": ""
-            }
+  "status": "success",
+  "response": {
+    "note": "Retail Prices in Bangkok & Vicinities Unit : Baht/Litre",
+    "date": "28 ธันวาคม 2564",
+    "stations": {
+      "ptt": {
+        "gasoline_95": { "name": "เบนซิน 95", "price": "38.56" },
+        "gasohol_95": { "name": "แก๊สโซฮอล์ 95", "price": "31.15" },
+        "gasohol_91": { "name": "แก๊สโซฮอล์ 91", "price": "30.88" },
+        "gasohol_e20": { "name": "แก๊สโซฮอล์ E20", "price": "29.64" },
+        "gasohol_e85": { "name": "แก๊สโซฮอล์ E85", "price": "23.74" },
+        "diesel": { "name": "ดีเซล", "price": "28.44" },
+        "diesel_b7": { "name": "ดีเซล B7", "price": "28.44" },
+        "diesel_b20": { "name": "ดีเซลหมุนเร็ว B20", "price": "28.44" },
+        "premium_diesel": { "name": "ดีเซลพรีเมี่ยม", "price": "34.46" },
+        "ngv": { "name": "แก๊ส NGV", "price": "15.59" }
+      },
+      "bcp": {
+        "gasohol_95": { "name": "แก๊สโซฮอล์ 95", "price": "31.15" },
+        "gasohol_91": { "name": "แก๊สโซฮอล์ 91", "price": "30.88" },
+        "gasohol_e20": { "name": "แก๊สโซฮอล์ E20", "price": "29.64" },
+        "gasohol_e85": { "name": "แก๊สโซฮอล์ E85", "price": "23.74" },
+        "diesel": { "name": "ดีเซล", "price": "28.44" },
+        "diesel_b7": { "name": "ดีเซล B7", "price": "28.44" },
+        "diesel_b20": { "name": "ดีเซลหมุนเร็ว B20", "price": "28.44" },
+        "premium_diesel": { "name": "ดีเซลพรีเมี่ยม", "price": "34.46" },
+        "ngv": { "name": "แก๊ส NGV", "price": "15.59" }
+      },
+      "shell": {
+        "gasohol_95": { "name": "แก๊สโซฮอล์ 95", "price": "31.65" },
+        "gasohol_91": { "name": "แก๊สโซฮอล์ 91", "price": "31.38" },
+        "gasohol_e20": { "name": "แก๊สโซฮอล์ E20", "price": "30.14" },
+        "diesel": { "name": "ดีเซล", "price": "29.04" },
+        "diesel_b7": { "name": "ดีเซล B7", "price": "29.04" },
+        "diesel_b20": { "name": "ดีเซลหมุนเร็ว B20", "price": "29.04" },
+        "premium_diesel": { "name": "ดีเซลพรีเมี่ยม", "price": "35.49" },
+        "vpower_gasohol_95": {
+          "name": "เชลล์ วี-เพาเวอร์ แก๊สโซฮอล์ 95",
+          "price": "39.14"
+        },
+        "vpower_diesel": {
+          "name": "เชลล์ วี-เพาเวอร์ ดีเซล",
+          "price": "35.49"
+        },
+        "vpower_diesel_b7": {
+          "name": "เชลล์ วี-เพาเวอร์ ดีเซล B7",
+          "price": "35.49"
         }
+      },
+      "esso": {
+        "gasohol_95": { "name": "แก๊สโซฮอล์ 95", "price": "31.15" },
+        "gasohol_91": { "name": "แก๊สโซฮอล์ 91", "price": "30.88" },
+        "gasohol_e20": { "name": "แก๊สโซฮอล์ E20", "price": "29.64" },
+        "diesel": { "name": "ดีเซล", "price": "28.64" },
+        "diesel_b7": { "name": "ดีเซล B7", "price": "28.64" },
+        "premium_diesel": { "name": "ดีเซลพรีเมี่ยม", "price": "35.26" }
+      },
+      "caltex": {
+        "gasoline_95": { "name": "เบนซิน 95", "price": "39.51" },
+        "gasohol_95": { "name": "แก๊สโซฮอล์ 95", "price": "31.65" },
+        "gasohol_91": { "name": "แก๊สโซฮอล์ 91", "price": "31.38" },
+        "gasohol_e20": { "name": "แก๊สโซฮอล์ E20", "price": "30.14" },
+        "diesel": { "name": "ดีเซล", "price": "29.04" },
+        "diesel_b7": { "name": "ดีเซล B7", "price": "29.04" },
+        "diesel_b20": { "name": "ดีเซลหมุนเร็ว B20", "price": "29.04" },
+        "premium_diesel": { "name": "ดีเซลพรีเมี่ยม", "price": "35.49" }
+      },
+      "irpc": {
+        "gasohol_95": { "name": "แก๊สโซฮอล์ 95", "price": "31.15" },
+        "gasohol_91": { "name": "แก๊สโซฮอล์ 91", "price": "30.88" },
+        "diesel": { "name": "ดีเซล", "price": "28.44" },
+        "diesel_b7": { "name": "ดีเซล B7", "price": "28.44" }
+      },
+      "pt": {
+        "gasoline_95": { "name": "เบนซิน 95", "price": "39.36" },
+        "gasohol_95": { "name": "แก๊สโซฮอล์ 95", "price": "31.45" },
+        "gasohol_91": { "name": "แก๊สโซฮอล์ 91", "price": "31.18" },
+        "gasohol_e20": { "name": "แก๊สโซฮอล์ E20", "price": "29.94" },
+        "diesel": { "name": "ดีเซล", "price": "28.74" },
+        "diesel_b7": { "name": "ดีเซล B7", "price": "28.74" },
+        "diesel_b20": { "name": "ดีเซลหมุนเร็ว B20", "price": "28.74" }
+      },
+      "susco": {
+        "gasoline_95": { "name": "เบนซิน 95", "price": "39.06" },
+        "gasohol_95": { "name": "แก๊สโซฮอล์ 95", "price": "31.15" },
+        "gasohol_91": { "name": "แก๊สโซฮอล์ 91", "price": "30.88" },
+        "gasohol_e20": { "name": "แก๊สโซฮอล์ E20", "price": "29.64" },
+        "diesel": { "name": "ดีเซล", "price": "28.44" },
+        "diesel_b7": { "name": "ดีเซล B7", "price": "28.44" },
+        "diesel_b20": { "name": "ดีเซลหมุนเร็ว B20", "price": "28.44" },
+        "ngv": { "name": "แก๊ส NGV", "price": "15.59" }
+      },
+      "pure": {
+        "gasohol_95": { "name": "แก๊สโซฮอล์ 95", "price": "31.15" },
+        "gasohol_91": { "name": "แก๊สโซฮอล์ 91", "price": "30.88" },
+        "gasohol_e20": { "name": "แก๊สโซฮอล์ E20", "price": "29.64" },
+        "diesel": { "name": "ดีเซล", "price": "28.64" },
+        "diesel_b7": { "name": "ดีเซล B7", "price": "28.64" }
+      },
+      "susco_dealers": {
+        "gasoline_95": { "name": "เบนซิน 95", "price": "39.06" },
+        "gasohol_95": { "name": "แก๊สโซฮอล์ 95", "price": "31.15" },
+        "gasohol_91": { "name": "แก๊สโซฮอล์ 91", "price": "30.88" },
+        "gasohol_e20": { "name": "แก๊สโซฮอล์ E20", "price": "29.64" },
+        "diesel": { "name": "ดีเซล", "price": "28.44" },
+        "diesel_b7": { "name": "ดีเซล B7", "price": "28.44" },
+        "diesel_b20": { "name": "ดีเซลหมุนเร็ว B20", "price": "28.44" }
+      }
     }
+  }
 }
 ```
+
 </details>
 
-Warning
--------
+## Warning
+
 This API crawl data from gasprice.kapook.com and the API cannot handle URL in case of 404 yet
