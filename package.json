@@ -4,7 +4,8 @@
   "description": "thai oil price api",
   "main": "index.ts",
   "scripts": {
-    "start": "nodemon index.ts"
+    "start": "tsc index.ts && node index.js",
+    "dev": "nodemon index.ts"
   },
   "repository": "https://github.com/max180643/thai-oil-api",
   "author": "max180643 <max180643@gmail.com>",

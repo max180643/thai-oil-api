@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import cheerio from "cheerio";
+import * as cheerio from "cheerio";
 import PRICE_CONFIG from "../config/price";
 
 const priceHandler = async () => {
