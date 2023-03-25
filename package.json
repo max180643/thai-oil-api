@@ -1,6 +1,6 @@
 {
   "name": "thai-oil-api",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "thai oil price api",
   "main": "index.ts",
   "scripts": {
