@@ -12,13 +12,16 @@ const PRICE_CONFIG = {
         "body > section > article.gasprice.ptt > ul > li:nth-child(2)",
       gasohol_e85:
         "body > section > article.gasprice.ptt > ul > li:nth-child(3)",
-      diesel: "body > section > article.gasprice.ptt > ul > li:nth-child(10)",
+      diesel: "body > section > article.gasprice.ptt > ul > li:nth-child(9)",
       diesel_b7: "body > section > article.gasprice.ptt > ul > li:nth-child(6)",
       diesel_b20:
-        "body > section > article.gasprice.ptt > ul > li:nth-child(9)",
-      premium_diesel:
         "body > section > article.gasprice.ptt > ul > li:nth-child(8)",
-      ngv: "body > section > article.gasprice.ptt > ul > li:nth-child(7)",
+      premium_diesel:
+        "body > section > article.gasprice.ptt > ul > li:nth-child(7)",
+      premium_gasohol_95:
+        "body > section > article.gasprice.ptt > ul > li:nth-child(11)",
+      superpower_gasohol_95:
+        "body > section > article.gasprice.ptt > ul > li:nth-child(10)",
     },
     bcp: {
       gasohol_95:
@@ -29,13 +32,16 @@ const PRICE_CONFIG = {
         "body > section > article.gasprice.bcp > ul > li:nth-child(2)",
       gasohol_e85:
         "body > section > article.gasprice.bcp > ul > li:nth-child(3)",
-      diesel: "body > section > article.gasprice.bcp > ul > li:nth-child(9)",
+      diesel: "body > section > article.gasprice.bcp > ul > li:nth-child(8)",
       diesel_b7: "body > section > article.gasprice.bcp > ul > li:nth-child(5)",
       diesel_b20:
-        "body > section > article.gasprice.bcp > ul > li:nth-child(8)",
-      premium_diesel:
         "body > section > article.gasprice.bcp > ul > li:nth-child(7)",
-      ngv: "body > section > article.gasprice.bcp > ul > li:nth-child(6)",
+      premium_gasohol_95:
+        "body > section > article.gasprice.bcp > ul > li:nth-child(9)",
+      premium_gasohol_97:
+        "body > section > article.gasprice.bcp > ul > li:nth-child(10)",
+      premium_diesel:
+        "body > section > article.gasprice.bcp > ul > li:nth-child(6)",
     },
     shell: {
       gasohol_95:
@@ -49,6 +55,8 @@ const PRICE_CONFIG = {
         "body > section > article.gasprice.shell > ul > li:nth-child(4)",
       diesel_b20:
         "body > section > article.gasprice.shell > ul > li:nth-child(7)",
+      premium_gasohol_95:
+        "body > section > article.gasprice.shell > ul > li:nth-child(11)",
       premium_diesel:
         "body > section > article.gasprice.shell > ul > li:nth-child(5)",
       vpower_gasohol_95:
@@ -68,6 +76,8 @@ const PRICE_CONFIG = {
       diesel: "body > section > article.gasprice.esso > ul > li:nth-child(6)",
       diesel_b7:
         "body > section > article.gasprice.esso > ul > li:nth-child(4)",
+      premium_gasohol_95:
+        "body > section > article.gasprice.esso > ul > li:nth-child(7)",
       premium_diesel:
         "body > section > article.gasprice.esso > ul > li:nth-child(5)",
     },
@@ -117,11 +127,9 @@ const PRICE_CONFIG = {
         "body > section > article.gasprice.susco > ul > li:nth-child(3)",
       gasohol_e20:
         "body > section > article.gasprice.susco > ul > li:nth-child(2)",
-      diesel: "body > section > article.gasprice.susco > ul > li:nth-child(8)",
+      diesel: "body > section > article.gasprice.susco > ul > li:nth-child(7)",
       diesel_b7:
         "body > section > article.gasprice.susco > ul > li:nth-child(5)",
-      diesel_b20:
-        "body > section > article.gasprice.susco > ul > li:nth-child(7)",
       ngv: "body > section > article.gasprice.susco > ul > li:nth-child(6)",
     },
     pure: {
@@ -145,11 +153,9 @@ const PRICE_CONFIG = {
       gasohol_e20:
         "body > section > article.gasprice.suscodealers > ul > li:nth-child(2)",
       diesel:
-        "body > section > article.gasprice.suscodealers > ul > li:nth-child(7)",
+        "body > section > article.gasprice.suscodealers > ul > li:nth-child(6)",
       diesel_b7:
         "body > section > article.gasprice.suscodealers > ul > li:nth-child(5)",
-      diesel_b20:
-        "body > section > article.gasprice.suscodealers > ul > li:nth-child(6)",
     },
   },
 };
