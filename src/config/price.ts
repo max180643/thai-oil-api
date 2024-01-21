@@ -50,21 +50,18 @@ const PRICE_CONFIG = {
         "body > section > article.gasprice.shell > ul > li:nth-child(3)",
       gasohol_e20:
         "body > section > article.gasprice.shell > ul > li:nth-child(2)",
-      diesel: "body > section > article.gasprice.shell > ul > li:nth-child(8)",
       diesel_b7:
         "body > section > article.gasprice.shell > ul > li:nth-child(4)",
-      diesel_b20:
-        "body > section > article.gasprice.shell > ul > li:nth-child(7)",
       premium_gasohol_95:
-        "body > section > article.gasprice.shell > ul > li:nth-child(11)",
+        "body > section > article.gasprice.shell > ul > li:nth-child(9)",
       premium_diesel:
         "body > section > article.gasprice.shell > ul > li:nth-child(5)",
       vpower_gasohol_95:
         "body > section > article.gasprice.shell > ul > li:nth-child(6)",
-      vpower_diesel:
-        "body > section > article.gasprice.shell > ul > li:nth-child(9)",
       vpower_diesel_b7:
-        "body > section > article.gasprice.shell > ul > li:nth-child(10)",
+        "body > section > article.gasprice.shell > ul > li:nth-child(8)",
+      fuelsafe_diesel_b7:
+        "body > section > article.gasprice.shell > ul > li:nth-child(7)",
     },
     esso: {
       gasohol_95:
@@ -114,9 +111,8 @@ const PRICE_CONFIG = {
       gasohol_91: "body > section > article.gasprice.pt > ul > li:nth-child(3)",
       gasohol_e20:
         "body > section > article.gasprice.pt > ul > li:nth-child(2)",
-      diesel: "body > section > article.gasprice.pt > ul > li:nth-child(7)",
+      diesel: "body > section > article.gasprice.pt > ul > li:nth-child(6)",
       diesel_b7: "body > section > article.gasprice.pt > ul > li:nth-child(5)",
-      diesel_b20: "body > section > article.gasprice.pt > ul > li:nth-child(6)",
     },
     susco: {
       gasoline_95:
