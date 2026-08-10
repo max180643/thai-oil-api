@@ -16,8 +16,11 @@ const priceHandler = async () => {
 
   const $ = cheerio.load(body);
 
-  const date = $("body > section > h2").text().split(" ");
-  const formatDate = `${date[1]} ${date[2]} ${date[3]}`;
+  const formatDate = $("h2")
+    .first()
+    .text()
+    .replace(/^อัปเดตราคาน้ำมันล่าสุด\s*/, "")
+    .trim();
 
   const stationData: {
     [key: string]: { [key: string]: { [key: string]: string } };
@@ -33,13 +36,25 @@ const priceHandler = async () => {
 
     gasTypes.forEach((gasType) => {
       stationPrice[gasType] = {
-        name: stationConfig[gasType]
-          ? $(`${stationConfig[gasType]} > span`).text().trim()
-          : "",
-        price: stationConfig[gasType]
-          ? $(`${stationConfig[gasType]} > em`).text().trim()
-          : "",
+        name: "",
+        price: "",
       };
+
+      const brandId = station.replace(/_/g, "");
+
+      $(`#brand-${brandId} li`).each((_, fuel) => {
+        const values = $(fuel)
+          .find("p")
+          .map((__, value) => $(value).text().trim())
+          .get();
+
+        if (values[0] === stationConfig[gasType]) {
+          stationPrice[gasType] = {
+            name: values[0],
+            price: values[1] || "",
+          };
+        }
+      });
     });
 
     stationData[station] = stationPrice;

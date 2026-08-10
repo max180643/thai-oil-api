@@ -1,118 +1,81 @@
 const PRICE_CONFIG = {
-  URL: "http://gasprice.kapook.com/gasprice.php",
+  URL: "https://gasprice.kapook.com/",
   SELECTOR: {
     ptt: {
-      gasoline_95:
-        "body > section > article.gasprice.ptt > ul > li:nth-child(5)",
-      gasohol_95:
-        "body > section > article.gasprice.ptt > ul > li:nth-child(1)",
-      gasohol_91:
-        "body > section > article.gasprice.ptt > ul > li:nth-child(4)",
-      gasohol_e20:
-        "body > section > article.gasprice.ptt > ul > li:nth-child(2)",
-      gasohol_e85:
-        "body > section > article.gasprice.ptt > ul > li:nth-child(3)",
-      diesel: "body > section > article.gasprice.ptt > ul > li:nth-child(8)",
-      diesel_b20:
-        "body > section > article.gasprice.ptt > ul > li:nth-child(9)",
-      premium_diesel:
-        "body > section > article.gasprice.ptt > ul > li:nth-child(7)",
-      superpower_gasohol_95:
-        "body > section > article.gasprice.ptt > ul > li:nth-child(10)",
-      ngv: "body > section > article.gasprice.ptt > ul > li:nth-child(6)",
+      gasoline_95: "เบนซิน 95",
+      gasohol_95: "แก๊สโซฮอล์ 95",
+      gasohol_91: "แก๊สโซฮอล์ 91",
+      gasohol_e20: "แก๊สโซฮอล์ E20",
+      gasohol_e85: "แก๊สโซฮอล์ E85",
+      diesel: "ดีเซล B7",
+      diesel_b20: "ดีเซล B20",
+      premium_diesel: "ดีเซลพรีเมียม",
+      superpower_gasohol_95: "แก๊สโซฮอล์ 99 พรีเมียม",
+      ngv: "แก๊ส NGV",
     },
     bcp: {
-      gasohol_95:
-        "body > section > article.gasprice.bcp > ul > li:nth-child(1)",
-      gasohol_91:
-        "body > section > article.gasprice.bcp > ul > li:nth-child(4)",
-      gasohol_e20:
-        "body > section > article.gasprice.bcp > ul > li:nth-child(2)",
-      gasohol_e85:
-        "body > section > article.gasprice.bcp > ul > li:nth-child(3)",
-      disel: "body > section > article.gasprice.bcp > ul > li:nth-child(6)",
-      diesel_b20:
-        "body > section > article.gasprice.bcp > ul > li:nth-child(7)",
-      premium_diesel:
-        "body > section > article.gasprice.bcp > ul > li:nth-child(5)",
-      premium_gasohol_95:
-        "body > section > article.gasprice.bcp > ul > li:nth-child(8)",
+      gasohol_95: "แก๊สโซฮอล์ 95",
+      gasohol_91: "แก๊สโซฮอล์ 91",
+      gasohol_e20: "แก๊สโซฮอล์ E20",
+      gasohol_e85: "แก๊สโซฮอล์ E85",
+      disel: "ดีเซล B7",
+      diesel_b20: "ดีเซล B20",
+      premium_diesel: "ดีเซลพรีเมียม",
+      premium_gasohol_95: "แก๊สโซฮอล์ 95 พรีเมียม",
     },
     shell: {
-      gasohol_95:
-        "body > section > article.gasprice.shell > ul > li:nth-child(1)",
-      gasohol_91:
-        "body > section > article.gasprice.shell > ul > li:nth-child(3)",
-      gasohol_e20:
-        "body > section > article.gasprice.shell > ul > li:nth-child(2)",
-      vpower_gasohol_95:
-        "body > section > article.gasprice.shell > ul > li:nth-child(4)",
-      vpower_diesel:
-        "body > section > article.gasprice.shell > ul > li:nth-child(6)",
-      fuelsafe_diesel:
-        "body > section > article.gasprice.shell > ul > li:nth-child(5)",
+      gasohol_95: "เชลล์ ฟิวเซฟ แก๊สโซฮอล์ 95",
+      gasohol_91: "เชลล์ ฟิวเซฟ แก๊สโซฮอล์ 91",
+      gasohol_e20: "เชลล์ ฟิวเซฟ แก๊สโซฮอล์ E20",
+      vpower_gasohol_95: "เชลล์ วี-เพาเวอร์ แก๊สโซฮอล์ 95",
+      vpower_diesel: "เชลล์ วี-เพาเวอร์ ดีเซล",
+      fuelsafe_diesel: "เชลล์ ฟิวเซฟ ดีเซล",
+      diesel_b20: "เชลล์ ดีเซล B20",
     },
     caltex: {
-      gasoline_95:
-        "body > section > article.gasprice.caltex > ul > li:nth-child(4)",
-      gasohol_95:
-        "body > section > article.gasprice.caltex > ul > li:nth-child(1)",
-      gasohol_91:
-        "body > section > article.gasprice.caltex > ul > li:nth-child(3)",
-      gasohol_e20:
-        "body > section > article.gasprice.caltex > ul > li:nth-child(2)",
-      diesel: "body > section > article.gasprice.caltex > ul > li:nth-child(6)",
-      premium_diesel:
-        "body > section > article.gasprice.caltex > ul > li:nth-child(5)",
+      gasoline_95: "เบนซิน 95",
+      gasohol_95: "แก๊สโซฮอล์ 95",
+      gasohol_91: "แก๊สโซฮอล์ 91",
+      gasohol_e20: "แก๊สโซฮอล์ E20",
+      diesel: "ดีเซล B7",
+      diesel_b20: "ดีเซล B20",
+      premium_diesel: "ดีเซลพรีเมียม",
     },
     irpc: {
-      gasohol_95:
-        "body > section > article.gasprice.irpc > ul > li:nth-child(1)",
-      gasohol_91:
-        "body > section > article.gasprice.irpc > ul > li:nth-child(2)",
-      diesel: "body > section > article.gasprice.irpc > ul > li:nth-child(3)",
+      gasohol_95: "แก๊สโซฮอล์ 95",
+      gasohol_91: "แก๊สโซฮอล์ 91",
+      diesel: "ดีเซล B7",
     },
     pt: {
-      gasoline_95:
-        "body > section > article.gasprice.pt > ul > li:nth-child(4)",
-      gasohol_95: "body > section > article.gasprice.pt > ul > li:nth-child(1)",
-      gasohol_91: "body > section > article.gasprice.pt > ul > li:nth-child(3)",
-      gasohol_e20:
-        "body > section > article.gasprice.pt > ul > li:nth-child(2)",
-      diesel: "body > section > article.gasprice.pt > ul > li:nth-child(5)",
+      gasoline_95: "เบนซิน 95",
+      gasohol_95: "แก๊สโซฮอล์ 95",
+      gasohol_91: "แก๊สโซฮอล์ 91",
+      gasohol_e20: "แก๊สโซฮอล์ E20",
+      diesel: "ดีเซล B7",
+      diesel_b20: "ดีเซล B20",
     },
     susco: {
-      gasoline_95:
-        "body > section > article.gasprice.susco > ul > li:nth-child(4)",
-      gasohol_95:
-        "body > section > article.gasprice.susco > ul > li:nth-child(1)",
-      gasohol_91:
-        "body > section > article.gasprice.susco > ul > li:nth-child(3)",
-      gasohol_e20:
-        "body > section > article.gasprice.susco > ul > li:nth-child(2)",
-      diesel: "body > section > article.gasprice.susco > ul > li:nth-child(6)",
-      ngv: "body > section > article.gasprice.susco > ul > li:nth-child(5)",
+      gasoline_95: "เบนซิน 95",
+      gasohol_95: "แก๊สโซฮอล์ 95",
+      gasohol_91: "แก๊สโซฮอล์ 91",
+      gasohol_e20: "แก๊สโซฮอล์ E20",
+      diesel: "ดีเซล B7",
+      diesel_b20: "ดีเซล B20",
     },
     pure: {
-      gasohol_95:
-        "body > section > article.gasprice.pure > ul > li:nth-child(1)",
-      gasohol_91:
-        "body > section > article.gasprice.pure > ul > li:nth-child(3)",
-      gasohol_e20:
-        "body > section > article.gasprice.pure > ul > li:nth-child(2)",
-      diesel: "body > section > article.gasprice.pure > ul > li:nth-child(4)",
+      gasohol_95: "แก๊สโซฮอล์ 95",
+      gasohol_91: "แก๊สโซฮอล์ 91",
+      gasohol_e20: "แก๊สโซฮอล์ E20",
+      diesel: "ดีเซล B7",
+      diesel_b20: "ดีเซล B20",
     },
     susco_dealers: {
-      gasoline_95:
-        "body > section > article.gasprice.suscodealers > ul > li:nth-child(4)",
-      gasohol_95:
-        "body > section > article.gasprice.suscodealers > ul > li:nth-child(1)",
-      gasohol_91:
-        "body > section > article.gasprice.suscodealers > ul > li:nth-child(3)",
-      gasohol_e20:
-        "body > section > article.gasprice.suscodealers > ul > li:nth-child(2)",
-      diesel:
-        "body > section > article.gasprice.suscodealers > ul > li:nth-child(5)",
+      gasoline_95: "เบนซิน 95",
+      gasohol_95: "แก๊สโซฮอล์ 95",
+      gasohol_91: "แก๊สโซฮอล์ 91",
+      gasohol_e20: "แก๊สโซฮอล์ E20",
+      diesel: "ดีเซล B7",
+      diesel_b20: "ดีเซล B20",
     },
   },
 };
